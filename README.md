@@ -1,5 +1,3 @@
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/eritislami/evobot)
-
 ![logo](https://repository-images.githubusercontent.com/186841818/8aa95700-7730-11e9-84be-e80f28520325)
 
 # 🤖 EvoBot (Discord Music Bot)
@@ -13,10 +11,6 @@
 3. Node.js v12.0.0 or newer
 
 ## 🚀 Getting Started
-
-If deploying to Heroku make sure to create config variables
-
-![heroku](https://i.imgur.com/iaoUePg.png?1)
 
 ```
 git clone https://github.com/eritislami/evobot.git
@@ -36,11 +30,9 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 {
   "TOKEN": "",
   "YOUTUBE_API_KEY": "",
-  "SOUNDCLOUD_CLIENT_ID": "",
   "MAX_PLAYLIST_SIZE": 10,
   "PREFIX": "/",
-  "PRUNING": false,
-  "STAY_TIME": 30
+  "PRUNING": false
 }
 ```
 
@@ -56,17 +48,13 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 
 `/play under the bridge red hot chili peppers`
 
-* 🎶 Play music from Soundcloud via url
+* 🎶 Play music from Soundcloud via url **(Requires Soundcloud Client Id)**
 
 `/play https://soundcloud.com/blackhorsebrigade/pearl-jam-alive`
 
 * 🔎 Search and select music to play
 
 `/search Pearl Jam`
-
-Reply with song number or numbers seperated by comma that you wish to play
-
-Examples: `1` or `1,2,3`
 
 * 📃 Play youtube playlists via url
 
@@ -80,12 +68,11 @@ Examples: `1` or `1,2,3`
 * Loop / Repeat (/loop)
 * Shuffle (/shuffle)
 * Volume control (/volume, /v)
-* Lyrics (/lyrics, /ly)
+* Lyircs (/lyrics, /ly)
 * Pause (/pause)
 * Resume (/resume, /r)
 * Skip (/skip, /s)
 * Skip to song # in queue (/skipto, /st)
-* Remove song # from queue (/remove, /rm)
 * Toggle pruning of bot messages (/pruning)
 * Help (/help, /h)
 * Command Handler from [discordjs.guide](https://discordjs.guide/)

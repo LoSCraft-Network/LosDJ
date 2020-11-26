@@ -1,19 +1,13 @@
 const { canModifyQueue } = require("../util/EvobotUtil");
 
 module.exports = {
-<<<<<<< HEAD
   name: "remover",
   description: "Remove uma música da fila",
-=======
-  name: "remove",
-  aliases: ["rm"],
-  description: "Remove song from the queue",
->>>>>>> upstream/master
   execute(message, args) {
     const queue = message.client.queue.get(message.guild.id);
     if (!queue) return message.channel.send("Não tem nenhuma fila.").catch(console.error);
     if (!canModifyQueue(message.member)) return;
-
+    
     if (!args.length) return message.reply(`Usage: ${message.client.prefix}remove <Queue Number>`);
     if (isNaN(args[0])) return message.reply(`Usage: ${message.client.prefix}remove <Queue Number>`);
 

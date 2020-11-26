@@ -19,11 +19,7 @@ module.exports = {
     }
 
     let lyricsEmbed = new MessageEmbed()
-<<<<<<< HEAD
       .setTitle("Letras")
-=======
-      .setTitle(`${queue.songs[0].title} — Lyrics`)
->>>>>>> upstream/master
       .setDescription(lyrics)
       .setColor("#F8AA2A")
       .setTimestamp();
