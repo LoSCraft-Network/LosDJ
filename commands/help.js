@@ -8,8 +8,13 @@ module.exports = {
     let commands = message.client.commands.array();
 
     let helpEmbed = new MessageEmbed()
+<<<<<<< HEAD
       .setTitle("Ajuda LoSDJ")
       .setDescription("Lista de comandos")
+=======
+      .setTitle(`${message.client.user.username} Help`)
+      .setDescription("List of all commands")
+>>>>>>> upstream/master
       .setColor("#F8AA2A");
 
     commands.forEach((cmd) => {

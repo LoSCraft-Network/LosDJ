@@ -11,10 +11,17 @@ module.exports = {
     if (!canModifyQueue(message.member))
       return message.reply("Voceê precisa entrar em um canal de voz primeiro!").catch(console.error);
 
+<<<<<<< HEAD
     if (!args[0]) return message.reply(`🔊 Volume atual: **${queue.volume}%**`).catch(console.error);
     if (isNaN(args[0])) return message.reply("Por favor use somente números.").catch(console.error);
     if (parseInt(args[0]) > 100 || parseInt(args[0]) < 0)
       return message.reply("Por favor use números entre 0 - 100.").catch(console.error);
+=======
+    if (!args[0]) return message.reply(`🔊 The current volume is: **${queue.volume}%**`).catch(console.error);
+    if (isNaN(args[0])) return message.reply("Please use a number to set volume.").catch(console.error);
+    if (Number(args[0]) > 100 || Number(args[0]) < 0 )
+      return message.reply("Please use a number between 0 - 100.").catch(console.error);
+>>>>>>> upstream/master
 
     queue.volume = args[0];
     queue.connection.dispatcher.setVolumeLogarithmic(args[0] / 100);
